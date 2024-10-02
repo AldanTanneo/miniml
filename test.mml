@@ -1,0 +1,62 @@
+let rec fact n = if n == 0 then 1 else n * fact (n - 1)
+
+let fact2 n =
+  let rec aux acc x = if x == 0 then acc else aux (x * acc) (x - 1) in
+  aux 1 n
+
+let f x y z = (x + z) * y
+let a a a a a a = ()
+let argh = "xy\x1bz César 🐬 \u{61}\u{0020}";;
+argh;;
+
+fact 6;;
+fact2 6;;
+
+let rec phi x =
+  if x == 0 then
+    0
+  else if x == 1 then
+    1
+  else
+    phi (x - 1) + phi (x - 2)
+;;
+
+let phi2 x =
+  let rec aux x a b =
+    if x == 0 then
+      a
+    else
+      aux (x - 1) b (a + b)
+  in
+    aux x 0 1
+;;
+
+phi2 20;;
+phi 20;;
+
+let fst = true;;
+let snd = false;;
+
+let tuple a b = fun x -> if x == fst then a else b;;
+
+let is_nil = false;;
+let is_cons = true;;
+
+let nil = tuple is_nil ();;
+let cons a b = tuple is_cons (tuple a b);;
+
+let lst = cons 1 (cons 2 (cons 3 nil));;
+
+let find n lst =
+  let rec aux i l =
+    if l fst == is_nil then
+      -1
+    else if l snd fst == n then
+      i
+    else aux (i+1) (l snd snd)
+  in
+    aux 0 lst;;
+
+find 2 lst;;
+
+"a" + "b";;

@@ -1,0 +1,15 @@
+-Isrc
+-xc
+-std=gnu11
+-Wall
+-Werror
+-Wextra
+-Wconversion
+-Wimplicit-fallthrough
+-Wpedantic
+-Wno-variadic-macros
+-Wno-gnu-zero-variadic-macro-arguments
+-Wno-delimited-escape-sequence-extension
+-Wno-gnu-binary-literal
+-Wno-strict-prototypes
+-Wno-gnu-case-range
